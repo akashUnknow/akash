@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../assets/logo.jpg';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
@@ -10,14 +11,11 @@ const Navbar = () => {
             <div className="mr-6">
                 <ul className="flex space-x-16">
                     {["Home", "About", "Lab"].map((item, index) => (
-                        <li
-                            key={index}
-                            className="text-white font-semibold cursor-pointer 
-                        transition-all duration-300 ease-in-out 
-                        hover:text-blue-400 hover:scale-110"
-                        >
-                            {item}
-                        </li>
+                       <Link to={item === "Home" ? "/" : `/${item.toLowerCase()}`} key={index}>
+                            <li className="text-white hover:text-[#7127BA] transition cursor-pointer">
+                                {item}
+                            </li>
+                       </Link>
                     ))}
                 </ul>
             </div>

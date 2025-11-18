@@ -1,69 +1,35 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import java from "../assets/exp/java.png";
 
 const CardDemo = () => {
   return (
-    <Card className="w-full max-w-sm">
-      <CardHeader>
-        <CardTitle>Login to your account</CardTitle>
-        <CardDescription>
-          Enter your email below to login to your account
-        </CardDescription>
+    <div className="relative w-[500px] h-[168px] mx-auto">
+      <div className="absolute inset-0 bg-[#7127BA] blur-2xl opacity-40 rounded-full"></div>
 
-        {/* Removed CardAction (ShadCN doesn't export this) */}
-        <div className="pt-2">
-          <Button variant="link">Sign Up</Button>
+      {/* Card Background and Content */}
+      <div className="absolute inset-0 bg-[#2C1250] rounded-[15px] flex items-center p-5">
+
+        {/* Image */}
+        <div className="w-24 h-24 rounded-lg bg-transparent flex items-center justify-center">
+          <img src={java} alt="Java Logo" className="w-16 h-16 object-contain" />
         </div>
-      </CardHeader>
 
-      <CardContent>
-        <form>
-          <div className="flex flex-col gap-6">
-            <div className="grid gap-2">
-              <Label htmlFor="email">Email</Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="m@example.com"
-                required
-              />
-            </div>
 
-            <div className="grid gap-2">
-              <div className="flex items-center">
-                <Label htmlFor="password">Password</Label>
-                <a
-                  href="#"
-                  className="ml-auto text-sm underline-offset-4 hover:underline"
-                >
-                  Forgot your password?
-                </a>
-              </div>
-              <Input id="password" type="password" required />
-            </div>
-          </div>
-        </form>
-      </CardContent>
+        {/* Text + Button */}
+        <div className="ml-5 text-white">
+          <h1 className="text-xl font-semibold">Test Battle</h1>
+          <p className="text-sm opacity-75 w-60">
+            A user can take part in a test battle to assess their skills.
+          </p>
 
-      <CardFooter className="flex-col gap-2">
-        <Button type="submit" className="w-full">
-          Login
-        </Button>
-        <Button variant="outline" className="w-full">
-          Login with Google
-        </Button>
-      </CardFooter>
-    </Card>
+          <Button className="mt-3 bg-[#4F228D] hover:bg-[#6b34c3]">
+            Learn More
+          </Button>
+
+        </div>
+      </div>
+    </div>
   );
 };
 
