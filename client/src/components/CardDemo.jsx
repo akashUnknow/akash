@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import java from "../assets/exp/java.png";
 
-const CardDemo = () => {
+const CardDemo = ({title,des,btnLink,icon}) => {
   return (
     <div className="relative w-[500px] h-[168px] mx-auto">
       <div className="absolute inset-0 bg-[#7127BA] blur-2xl opacity-40 rounded-full"></div>
@@ -12,19 +12,21 @@ const CardDemo = () => {
 
         {/* Image */}
         <div className="w-24 h-24 rounded-lg bg-transparent flex items-center justify-center">
-          <img src={java} alt="Java Logo" className="w-16 h-16 object-contain" />
+          {/* <img src={java} alt="Java Logo" className="w-16 h-16 object-contain" />
+           */}
+           {icon}
         </div>
 
 
         {/* Text + Button */}
         <div className="ml-5 text-white">
-          <h1 className="text-xl font-semibold">Test Battle</h1>
-          <p className="text-sm opacity-75 w-60">
-            A user can take part in a test battle to assess their skills.
+          <h1 className="text-xl font-semibold">{title}</h1>
+          <p className="text-sm opacity-75 w-90">
+           {des}
           </p>
 
-          <Button className="mt-3 bg-[#4F228D] hover:bg-[#6b34c3]">
-            Learn More
+          <Button className="mt-3 bg-[#4F228D] hover:bg-[#6b34c3] cursor-pointer" onClick={() => window.open(btnLink, "_blank")} >
+            learn more
           </Button>
 
         </div>
