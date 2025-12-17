@@ -6,7 +6,7 @@ import Settings from "./pages/Settings";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/akash">
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />

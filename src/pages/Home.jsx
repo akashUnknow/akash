@@ -64,6 +64,7 @@ const Home = () => {
 
       {/* HERO SECTION */}
       <motion.div
+      id='home'
         className="flex items-center justify-center gap-10 pt-28"
         variants={fadeInUp}
       >
@@ -126,6 +127,7 @@ const Home = () => {
 
       {/* ABOUT SECTION */}
       <motion.div
+      id='about'
         className="mt-20 mx-auto max-w-2xl text-center"
         variants={fadeInUp}
       >
@@ -159,6 +161,7 @@ const Home = () => {
         </h1>
 
         <motion.div
+        
           className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10"
           variants={staggerContainer}
           initial="hidden"
@@ -197,7 +200,8 @@ It helps users and administrators track coupon usage"
       <div className="">
         <Job />
       </div>
-      <div>
+      <div id='contact'>
+
         <Contact />
       </div>
       <motion.div variants={fadeInUp}>

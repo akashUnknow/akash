@@ -3,10 +3,8 @@
   "references": [
     {
       "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.node.json"
     }
+    // Removed the tsconfig.node.json reference
   ],
   "compilerOptions": {
     "baseUrl": ".",
